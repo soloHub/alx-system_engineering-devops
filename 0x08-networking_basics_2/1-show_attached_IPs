@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # displays all active IPv4 IPs on the machine it is executed on
 
-ip addr show | grep -oP "(?<=inet )[\d\.]+(?=/)"
+ip addr show | grep "UP BROADCAST" | grep -oP "(?<=inet )[\d\.]+(?=/)"
